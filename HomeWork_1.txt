@@ -1,0 +1,80 @@
+Задание:
+Установить Ubuntu Desktop на виртуальную машину.
+Установить гостевые дополнения ОС.
+Установить Midnight Commander.
+* Установить SSH-соединение с виртуальной машиной из хостовой.
+
+Результат:
+Текстовый файл (*.txt) с кодом команды, выводящей информацию о версии ОС (вместе с результатом работы этой команды).
+Также привести текст остальных использованных команд.
+
+
+
+db@gb-linux:~$ sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Пол:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [107 kB]
+Получено 336 kB за 1с (262 kB/s)
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Может быть обновлено 9 пакетов. Запустите «apt list --upgradable» для их показа.
+db@gb-linux:~$
+
+
+
+db@gb-linux:~$ sudo apt install mc
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово
+Уже установлен пакет mc самой новой версии (3:4.8.27-1).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 9 пакетов не обновлено.
+db@gb-linux:~$
+
+
+
+PS C:\Users\Дмитрий> ssh -p 8022 db@localhost
+db@localhost's password:
+Permission denied, please try again.
+db@localhost's password:
+Permission denied, please try again.
+db@localhost's password:
+db@localhost: Permission denied (publickey,password).
+PS C:\Users\Дмитрий> ssh -p 8022 db@localhost
+db@localhost's password:
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-32-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Расширенное поддержание безопасности (ESM) для Applications выключено.
+
+0 обновлений может быть применено немедленно.
+
+Включите ESM Apps для получения дополнительных будущих обновлений безопасности.
+Смотрите https://ubuntu.com/esm или выполните: sudo pro status
+
+*** System restart required ***
+Last login: Thu Mar 30 23:54:50 2023 from 10.0.2.2
+
+
+
+db@gb-linux:~$ uname -a
+Linux gb-linux 5.19.0-32-generic #33~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Jan 30 17:03:34 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+
+db@gb-linux:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.2 LTS
+Release:        22.04
+Codename:       jammy
+db@gb-linux:~$
