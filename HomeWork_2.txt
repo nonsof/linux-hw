@@ -1,0 +1,78 @@
+Задание:
+1. Создать каталоги students и mentors в домашней директории, а в них — текстовые файлы students_list.txt и mentors_list.txt соответственно.
+2. Открыть созданные в п.1 файлы в любом текстовом редакторе и заполнить их (в соответствии с названием) списком Ваших одногруппников и наставников на данном потоке.
+3. Переместите файл mentors_list.txt в папку students.
+4. Удалите папку mentors.
+5. Переименуйте папку students в students_and_mentors.
+6. Удалите папку students_and_mentors вместе с содержимым.
+
+
+db@gb-linux:~$ mkdir students mentors
+
+db@gb-linux:~$ touch students/students_list.txt
+db@gb-linux:~$ touch mentors/mentors_list.txt
+
+db@gb-linux:~$ tree
+.
+├── Geekbrains
+├── mentors
+│   └── mentors_list.txt
+├── shared
+├── snap
+│   ├── firefox
+│   │   ├── 2356
+│   │   ├── 2487
+│   │   ├── common
+│   │   └── current -> 2356
+│   └── snapd-desktop-integration
+│       ├── 49
+│       ├── 57
+│       ├── common
+│       └── current -> 57
+├── students
+│   └── students_list.txt
+├── Видео
+├── Документы
+├── Загрузки
+├── Изображения
+├── Музыка
+├── Общедоступные
+├── Рабочий стол
+│   └── Создать папку
+└── Шаблоны
+
+db@gb-linux:~$ mv mentors/mentors_list.txt students/
+db@gb-linux:~$ rm mentors -r
+db@gb-linux:~$ mv students/ students_and_mentors
+db@gb-linux:~$ rm students_and_mentors -r
+db@gb-linux:~$ tree
+.
+├── Geekbrains
+├── shared
+├── snap
+│   ├── firefox
+│   │   ├── 2356
+│   │   ├── 2487
+│   │   ├── common
+│   │   └── current -> 2356
+│   └── snapd-desktop-integration
+│       ├── 49
+│       ├── 57
+│       ├── common
+│       └── current -> 57
+├── Видео
+├── Документы
+├── Загрузки
+├── Изображения
+├── Музыка
+├── Общедоступные
+├── Рабочий стол
+│   └── Создать папку
+└── Шаблоны
+
+22 directories, 0 files
+
+
+
+
+
